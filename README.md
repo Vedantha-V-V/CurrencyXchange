@@ -11,6 +11,7 @@ Android Application built to provide a smooth UI and rapid exchange of currencie
 - [x]  Single screen with input fields for amount and currency selection (dropdowns or autocomplete)
 - [x]  Display converted amount dynamically
 - [x]  Use clear typography and simple inputs for smooth UX
+
 **Functionalities:**
 - [x]  Fetch live exchange rates from a free API (e.g., ExchangeRate-API)
 - [x]  Convert entered amount to selected currency in real time
