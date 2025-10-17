@@ -1,4 +1,4 @@
-# Curreny Xchange
+# Currency Xchange
 ---
 
 Android Application built to provide a smooth UI and rapid exchange of currencies across the world in at quick speeds.
