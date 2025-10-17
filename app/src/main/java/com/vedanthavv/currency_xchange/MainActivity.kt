@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
         }
         val request = Volley.newRequestQueue(this)
 
-        val url = "https://v6.exchangerate-api.com/v6/4bf8d9a7a0303575439ff6e9/latest/${source}"
+        val url = "https://v6.exchangerate-api.com/v6/4bf8d9a7a0303575439ff6e9/latest/${dest}"
 
         val conversionResponse = JsonObjectRequest(
             Request.Method.GET, url,null,
@@ -95,12 +95,10 @@ class MainActivity : AppCompatActivity() {
                 response.keys().forEach { key ->
                     map[key] = response.get(key)
                 }
-                Log.e("MainActivity","$map")
                 val conversionRates = response.getJSONObject("conversion_rates")
-                val rate = conversionRates.getDouble(dest)
-                Log.e("MainActivity", "Rate from $source to $dest: $rate")
+                val rate = conversionRates.getDouble(source)
                 val converted = amount*rate
-                result.text = "${amount} ${source} is ${converted} ${dest}"
+                result.text = "${amount} ${dest} is ${converted} ${source}"
             },
             { error ->
                 error.printStackTrace()
